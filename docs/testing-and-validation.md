@@ -1,6 +1,5 @@
 ### 🧪 4. Testing & Validation (`docs/testing-and-validation.md`)
 
-```markdown
 # Validation and Troubleshooting Log
 
 ## 1. Bastion & App-A Connectivity Test
