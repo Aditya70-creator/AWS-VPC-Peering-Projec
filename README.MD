@@ -60,7 +60,6 @@ AWS-VPC-Peering-Project/
 │   ├── security-groups.png
 │   ├── ec2-instances.png
 │   ├── peering-connection.png
-│   └── connectivity-tests.png
 │
 └── README.md
 ```
