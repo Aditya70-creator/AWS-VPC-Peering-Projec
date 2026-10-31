@@ -24,13 +24,19 @@
 Configured local Windows SSH client (`C:\Users\KIIT\.ssh\config`) for streamlined multi-hop jumping:
 ```text
 Host ewb-bastion
-    HostName 54.252.132.74
+    HostName <my_ip>
     User ec2-user
     IdentityFile ~/.ssh/ewb-lab.pem
     IdentitiesOnly yes
 
 Host ewb-app-a
     HostName 10.10.2.10
+    User ec2-user
+    IdentityFile ~/.ssh/ewb-lab.pem
+    IdentitiesOnly yes
+    ProxyJump ewb-bastion
+Host ewb-app-b
+    HostName 10.20.1.10
     User ec2-user
     IdentityFile ~/.ssh/ewb-lab.pem
     IdentitiesOnly yes
