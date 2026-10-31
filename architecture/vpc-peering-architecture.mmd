@@ -1,0 +1,42 @@
+flowchart TB
+    Admin(["Admin User<br/>PowerShell / SSH"])
+
+    subgraph VPC_A["VPC-A | 10.10.0.0/16"]
+        direction TB
+
+        subgraph PUBLIC["Public Subnet | 10.10.1.0/24"]
+            Bastion["Bastion Host<br/>Public IP: 54.252.132.74"]
+        end
+
+        subgraph PRIVATE_A["Private Subnet | 10.10.2.0/24"]
+            AppA["App-Instance-A<br/>Private IP: 10.10.2.10"]
+        end
+
+        Bastion -->|"Internal SSH"| AppA
+    end
+
+    subgraph VPC_B["VPC-B | 10.20.0.0/16"]
+        direction TB
+
+        subgraph PRIVATE_B["Private Subnet | 10.20.1.0/24"]
+            AppB["App-Instance-B<br/>Private IP: 10.20.1.10"]
+        end
+    end
+
+    Admin -->|"SSH via ProxyJump"| Bastion
+
+    AppA <-.->|"VPC Peering<br/>pcx-011a8f0c6eada679b"| AppB
+
+    classDef admin fill:#263238,stroke:#00BCD4,color:#fff
+    classDef bastion fill:#1565C0,stroke:#64B5F6,color:#fff
+    classDef instance fill:#2E7D32,stroke:#81C784,color:#fff
+
+    class Admin admin
+    class Bastion bastion
+    class AppA,AppB instance
+
+    style VPC_A fill:#EDE7F6,stroke:#7E57C2,stroke-width:2px,color:#222
+    style VPC_B fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#222
+    style PUBLIC fill:#E1F5FE,stroke:#0288D1,color:#222
+    style PRIVATE_A fill:#E8F5E9,stroke:#388E3C,color:#222
+    style PRIVATE_B fill:#E8F5E9,stroke:#388E3C,color:#222
