@@ -118,7 +118,7 @@ Host app-b
     HostName 10.20.1.10
     User ec2-user
     ProxyJump bastion
-    IdentityFile ~/.ssh/aws-lab-key.pem
+    IdentityFile ~/.ssh/aws-lab-key.pem ```
 ---
 
 ## 📸 Architectural Evidence
