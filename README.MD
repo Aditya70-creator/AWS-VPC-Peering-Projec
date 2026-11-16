@@ -189,19 +189,40 @@ The SSH connection is routed through the Bastion Host while keeping private inst
 
 ## 📸 Architectural Evidence
 
-Project screenshots and implementation evidence are available in the `screenshots/` directory.
+All implementation screenshots captured during live deployment in `ap-south-1`:
 
-The evidence covers:
-
-- VPC and subnet configurations.
-- Route table associations and routes.
-- Security Group inbound rules.
-- EC2 instance configuration.
-- Active VPC Peering Connection.
-- SSH connectivity through the Bastion Host.
-- Private IP connectivity tests.
-
-Only screenshots captured during actual project execution are included.
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <b>1. VPC Configuration</b><br />
+      <img src="screenshots/vpc-configuration.png" alt="VPC Configuration" width="100%" />
+    </td>
+    <td align="center" width="50%">
+      <b>2. Subnet Configuration</b><br />
+      <img src="screenshots/subnet-configuration.png" alt="Subnet Configuration" width="100%" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <b>3. Custom Route Tables</b><br />
+      <img src="screenshots/route-tables.png" alt="Route Tables" width="100%" />
+    </td>
+    <td align="center" width="50%">
+      <b>4. Security Groups</b><br />
+      <img src="screenshots/security-groups.png" alt="Security Groups" width="100%" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <b>5. EC2 Instances (Bastion, App-A & App-B)</b><br />
+      <img src="screenshots/ec2-instances.png" alt="EC2 Instances" width="100%" />
+    </td>
+    <td align="center" width="50%">
+      <b>6. Active VPC Peering Connection</b><br />
+      <img src="screenshots/peering-connection.png" alt="VPC Peering Connection" width="100%" />
+    </td>
+  </tr>
+</table>
 
 ---
 
