@@ -16,12 +16,6 @@ The project focuses on network isolation, routing, controlled access, and connec
 
 ## 🏗️ Architecture Summary
 
-### 📐 Network Topology Diagram
-
-<div align="center">
-  <img src="architecture/vpc-peering-diagram.mmd" alt="AWS VPC Peering Architecture Diagram" width="90%" />
-</div>
-
 - **Cloud Provider:** Amazon Web Services (AWS)
 - **Region:** Asia Pacific (Mumbai) — `ap-south-1`
 - **VPC-A:** `10.10.0.0/16`
