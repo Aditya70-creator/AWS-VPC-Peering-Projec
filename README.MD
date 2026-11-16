@@ -97,10 +97,11 @@ Configured forward and return routes through the Peering Connection in both VPCs
 
 ### 7. Secure SSH Access
 
-Used local OpenSSH configuration and `ProxyJump` to access private application instances through the Bastion Host without copying private keys (`*.pem`) onto remote instances.
+Configured secure SSH access to private application instances through the Bastion Host using local OpenSSH configuration and `ProxyJump`.
 
-<details>
-<summary><b>View Local SSH ProxyJump Configuration (<code>~/.ssh/config</code>)</b></summary>
+This approach enables direct access to private instances without transferring private SSH keys (`*.pem`) to remote servers.
+
+**Local SSH Configuration (`~/.ssh/config`):**
 
 ```ssh-config
 Host bastion
@@ -118,7 +119,16 @@ Host app-b
     HostName 10.20.1.10
     User ec2-user
     ProxyJump bastion
-    IdentityFile ~/.ssh/aws-lab-key.pem ```
+    IdentityFile ~/.ssh/aws-lab-key.pem
+```
+
+With this configuration, private instances can be accessed using their SSH host aliases:
+
+- `ssh app-a`
+- `ssh app-b`
+
+The SSH connection is routed through the Bastion Host while keeping private instances inaccessible directly from the public internet.
+
 ---
 
 ## 📸 Architectural Evidence
