@@ -2,6 +2,17 @@
 
 A hands-on AWS cloud networking project implementing secure, private communication between two isolated Virtual Private Clouds (VPCs) using VPC Peering, a Bastion Host, custom route tables, and SSH ProxyJump.
 
+<div align="center">
+  <img src="assets/banner.svg" alt="AWS Secure Cross-VPC Connectivity Banner" width="100%" />
+
+  <br /><br />
+
+  ![AWS](https://img.shields.io/badge/AWS-ap--south--1-FF9900?style=for-the-badge&logo=amazonwebservices&logoColor=white)
+  ![Networking](https://img.shields.io/badge/VPC-Peering%20%26%20Routing-38BDF8?style=for-the-badge&logo=amazonaws&logoColor=white)
+  ![Security](https://img.shields.io/badge/Security-Bastion%20%26%20ProxyJump-3FB950?style=for-the-badge&logo=linux&logoColor=white)
+  ![OS](https://img.shields.io/badge/OS-Amazon%20Linux%202023-232F3E?style=for-the-badge&logo=amazon&logoColor=white)
+</div>
+
 ---
 
 ## 🚀 Project Overview
