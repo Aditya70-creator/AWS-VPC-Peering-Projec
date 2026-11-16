@@ -35,6 +35,8 @@ The project focuses on network isolation, routing, controlled access, and connec
 - **VPC-B:** `10.20.0.0/16`
   - Private Subnet: `10.20.1.0/24`
 
+
+```mermaid
 flowchart TB
     Admin(["Admin User<br/>PowerShell / SSH"])
 
@@ -61,7 +63,6 @@ flowchart TB
     end
 
     Admin -->|"SSH via ProxyJump"| Bastion
-
     AppA <-.->|"VPC Peering<br/>pcx-011a8f0c6eada679b"| AppB
 
     classDef admin fill:#263238,stroke:#00BCD4,color:#fff
@@ -77,6 +78,7 @@ flowchart TB
     style PUBLIC fill:#E1F5FE,stroke:#0288D1,color:#222
     style PRIVATE_A fill:#E8F5E9,stroke:#388E3C,color:#222
     style PRIVATE_B fill:#E8F5E9,stroke:#388E3C,color:#222
+```
 
 ### EC2 Instances
 
